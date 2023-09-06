@@ -1,3 +1,4 @@
+#Azul
 from claseEdificio import Edificio
 from claseFunciones import Funciones as f
 #comentar de que trata la clase, explicar que hereda de Edificio
