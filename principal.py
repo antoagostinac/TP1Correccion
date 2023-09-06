@@ -1,14 +1,14 @@
-from claseFunciones import Funciones as f
-from claseTienda import Tienda
-from claseComestible import Comestible
-
 #El codigo comienza importando clases y funciones de otros modulos.
 #Hay tres modulos llamados "claseFunciones", "claseTienda", y "claseProducto" 
 #que contienen clases y funciones utilizadas en el programa.
 
-listaProductosSinPrecioVenta = f.obtenerListaProductos()
+from claseFunciones import Funciones as f
+from claseTienda import Tienda
+from claseComestible import Comestible
+
 #Se llama a la funcion obtenerListaProductos() del modulo "claseFunciones" para obtener una lista de productos. 
 #Esta lista es una lista de diccionarios con informacion sobre productos.
+listaProductosSinPrecioVenta = f.obtenerListaProductos()
 
 elecSeccion = -1
 
