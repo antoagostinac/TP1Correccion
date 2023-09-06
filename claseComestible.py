@@ -3,7 +3,6 @@ from claseProducto import Producto
 #esta relación de herencia significa que la clase Comestible adquiere todas las propiedades (atributos y métodos) de la clase base Producto. 
 #la clase Comestible es una versión más específica o especializada de la clase Producto.
 class Comestible(Producto):
-    #explicar constructor, definir por que los atributos son privados
     #El constructor toma cuatro argumentos: nombre, precioCosto, fechaVencimiento, y precioVenta (con un valor predeterminado de 0).
     #se utiliza super() para llamar al constructor de la clase base Producto. 
     #Esto asegura que se inicialicen correctamente los atributos heredados de la clase base Producto, como nombre, precioVenta, y precioCosto. 
@@ -43,7 +42,7 @@ class Comestible(Producto):
             super().set("precioCosto", valor)
         elif(name=="fechaVencimiento"):
             self.__fechaVencimiento = valor
-    #explicar por que ocurre polimorfismo
+    #En este metodo mostrarProducto ocurre polimorfismo
     #La clase base Producto tiene un método llamado mostrarProducto que muestra una representación legible de los atributos del producto, incluyendo su nombre, precio de venta, precio de costo y ganancia.
     #En la subclase Comestible, se redefine el método mostrarProducto. Cuando se llama a mostrarProducto en una instancia de Comestible, se ejecutará la versión específica de este método definida en la clase Comestible, en lugar de la versión en la clase base Producto.
     #se utiliza super().mostrarProducto() para llamar al método mostrarProducto de la clase base Producto. Esto permite reutilizar la funcionalidad existente en la clase base y luego agregar información específica de la subclase Comestible.
