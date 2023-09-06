@@ -1,6 +1,6 @@
 #Azul
 class Edificio():
-#Se crea una clase edificio
+#Se crea una clase edificio que es una clase abstracta que va ser plantilla para otra clase
     def __init__(self, nombre, cantidadPisos, direccion):
 #El constructor toma tres argumentos nombre, cantidadPisos y direccion.
 #Los atributo se definden como privado ya que solo pueden acceder desde dentro de la clase. 
