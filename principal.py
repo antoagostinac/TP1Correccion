@@ -32,22 +32,30 @@ while(elecSeccion!=3):
         while(elecTienda!=4):
             elecTienda = int(input("1-Tienda Coronel\n2-Tienda Castillo\n3-Tienda Ortega\n4-Atras\nSeleccione: "))
             if(elecTienda==1):
+                #Dependiendo de la tienda seleccionada, se muestra otro submenu donde el usuario puede realizar operaciones
+                #como agregar un nuevo producto o actualizar el precio de un producto existente en esa tienda.
                 elecOpcionT=-1
                 while(elecOpcionT!=3):
                     elecOpcionT = int(input("1-Agregar nuevo producto\n2-Actualizar precio\n3-Atras\nSeleccione: "))
                     if(elecOpcionT==1):
+                        #Se muestra la lista de productos para que la tienda pueda elegir que producto agregar
                         print(f.listaProductosATexto(listaProductosSinPrecioVenta))
                         nombreProducto = input("Ingrese el nombre del producto que desea agregar: ")
                         precio = float(input("Ingrese el precio que le pondria al producto para la venta: "))
                         producto1=""
                         for producto in listaProductosSinPrecioVenta:
                             if(nombreProducto==(producto.get("nombre"))):
+                                #Se crea una instancia de Comestible
                                 producto1 = Comestible(nombreProducto, producto.get("precioCosto"), producto.get("fechaVencimiento"), precio)
                                 break
+                        #Se agrega el producto a la tienda
                         tienda1.agregarProducto(producto1, precio)
+                        #Se muestra la lista de productos de la tienda actualizada
                         print(tienda1.mostrarListaProductos())
                     elif(elecOpcionT==2):
+                        #Se obtiene la lista de Productos de la tienda
                         listaPro=tienda1.get("listaProductos")
+                        #Se muestran los productos actuales en la tienda
                         print(tienda1.mostrarListaProductos())
                         nombreProducto = input("Ingrese el nombre del producto que desea actualizar el precio: ")
                         precio = float(input("Ingrese el precio que le pondria al producto: "))
@@ -55,6 +63,8 @@ while(elecSeccion!=3):
                         for producto in listaPro:
                             if(nombreProducto==producto.get("nombre")):
                                 bandera=True
+                        #Si encuentra el producto en la lista de productos de la tienda
+                        #entonces permite actualizar su precio
                         if(bandera):
                             tienda1.actualizarPrecio(nombreProducto, precio)
             elif(elecTienda==2):
@@ -86,6 +96,8 @@ while(elecSeccion!=3):
                         if(bandera):
                             tienda2.actualizarPrecio(nombreProducto, precio)
             elif(elecTienda==3):
+                #Dependiendo de la tienda seleccionada, se muestra otro submenu donde el usuario puede realizar operaciones
+                #como agregar un nuevo producto o actualizar el precio de un producto existente en esa tienda.
                 elecOpcionT=-1
                 while(elecOpcionT!=3):
                     elecOpcionT = int(input("1-Agregar nuevo producto\n2-Actualizar precio\n3-Atras\nSeleccione: "))
@@ -113,13 +125,13 @@ while(elecSeccion!=3):
                             tienda3.actualizarPrecio(nombreProducto, precio)
     elif(elecSeccion==2):
         #Si el usuario selecciona la "Seccion Productos" el programa muestra una lista de productos disponibles 
-        #en cada tienda (independientemente de la tienda seleccionada) y luego calcula la media de precios de un producto 
-        #especifico seleccionado por el usuario en todas las tiendas.
+        #en cada tienda y luego calcula la media de precios de un producto especifico seleccionado por el usuario en todas las tiendas.
         print(tienda1.mostrarListaProductos())
         print(tienda2.mostrarListaProductos())
         print(tienda3.mostrarListaProductos())
         listaTiendas = [tienda1, tienda2, tienda3]
         nombreProducto = input("Seleccione el nombre del producto que desea calcular la media entre la lista de Tiendas: ")
+        #Se llama al metodo estatico calcularMedia para obtener el promedio del producto
         mediaProducto = f.calcularMedia(listaTiendas, nombreProducto)
         print(f"La media del producto {nombreProducto} es {mediaProducto:.2f}")
         
