@@ -1,5 +1,5 @@
 #Azul
-#Se crea una clase edificio que es una clase abstracta que va ser plantilla para otra clase
+#Se crea una clase Edificio que es una clase abstracta la cual sera plantilla para otra clase "Tienda"
 class Edificio():
 #El constructor toma tres argumentos nombre, cantidadPisos y direccion.
 #Los atributo se definden como privado ya que solo pueden acceder desde dentro de la clase. 
