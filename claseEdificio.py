@@ -1,3 +1,4 @@
+#Azul
 #explicar clase abstracta por que
 class Edificio():
     #explicar constructor, definir por que los atributos son privados
