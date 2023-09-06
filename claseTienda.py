@@ -14,7 +14,7 @@ class Tienda(Edificio):
         self.__listaProductos = []
         self.__tipo = tipo
 #Esto es un metodo get para la clase Tienda el método toma un argumento, name, que especifica el nombre del atributo a recuperar.
-#Si el nombre del atributo es "nombre", "cantidadPisos" o "direccion", el método llama al método getter de la clase base (Edificio) utilizando la función super(). 
+#Si el nombre del atributo es "nombre", "cantidadPisos" o "direccion", el método llama al método get de la clase base (Edificio) utilizando la función super(). 
 #Si el nombre del atributo es "listaProductos" o "tipo", el método devuelve el valor del atributo correspondiente. 
     def get(self, name):
         if(name=="nombre"):
@@ -28,7 +28,7 @@ class Tienda(Edificio):
         elif(name=="tipo"):
             return self.__tipo
     #Esto es metodo set de clase tienda l método toma dos argumentos: name, que especifica el nombre del atributo a establecer, y valor, que especifica el nuevo valor para el atributo. 
-    #Si el nombre del atributo es "nombre", "cantidadPisos" o "direccion", el método llama al método setter de la clase base (Edificio) utilizando la función super(). 
+    #Si el nombre del atributo es "nombre", "cantidadPisos" o "direccion", el método llama al método set de la clase base (Edificio) utilizando la función super(). 
     #Si el nombre del atributo es "listaProductos" o "tipo", el método establece el valor del atributo correspondiente en valor.
     def set(self, name, valor):
         if(name=="nombre"):
@@ -41,7 +41,7 @@ class Tienda(Edificio):
             self.__listaProductos = valor
         elif(name=="tipo"):
             self.__tipo = valor
-    #Esto es metodo privado llamado __textoListaProductos para la clase Tienda ,método privado solo puede ser accedido desde dentro de la clase.
+    #Esto es metodo privado llamado __textoListaProductos para la clase Tienda, método privado solo puede ser accedido desde dentro de la clase.
     #Este método devuelve una cadena que contiene información sobre los productos en la lista de productos del objeto. 
     #La cadena se genera llamando al método estático listaProductosATexto de la clase importada Funciones (con el alias f) y pasando como argumento la lista de productos del objeto.
     def __textoListaProductos(self): 
