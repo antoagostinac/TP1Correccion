@@ -1,3 +1,4 @@
+#Se crea una clase Producto que es una clase abstracta la cual sera plantilla para otra clase "Comestible"
 class Producto():
     #El constructor __init__ se utiliza para inicializar los atributos de la instancia de la clase Producto. 
     #Los atributos nombre, precioVenta y precioCosto se inicializan en este método.
