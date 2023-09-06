@@ -1,4 +1,3 @@
-#Azul
 #explicar la clase abstracta, por que
 class Producto():
     #explicar constructor, definir por que los atributos son privados
